@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Http\Middleware;
+namespace PhpPackagist\HyperfMiddleware;
 
 use Hyperf\Context\Context;
 use Psr\Container\ContainerInterface;
