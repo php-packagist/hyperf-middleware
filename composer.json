@@ -1,0 +1,21 @@
+{
+    "name": "php-packagist/hyperf-middleware",
+    "description": "Hyperf Middleware",
+    "type": "library",
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.12"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PhpPackagist\\HyperfMiddleware\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.4",
+        "ramsey/uuid": "^4.2",
+        "psr/http-message": "^1.0",
+        "psr/http-server-middleware": "^1.0",
+        "hyperf/utils": "^2.2"
+    }
+}
