@@ -22,6 +22,7 @@ declare(strict_types=1);
 return [
     'http' => [
         \PhpPackagist\HyperfMiddleware\RequestIdMiddleware::class,
+        \PhpPackagist\HyperfMiddleware\SlowLogMiddleware::class,
     ],
 ];
 ```
@@ -29,6 +30,7 @@ return [
 ## Features
 
 - [RequestIdMiddleware](src/RequestIdMiddleware.php) - RequestId Middleware
+- [SlowLogMiddleware](src/SlowLogMiddleware.php) - SlowLog Middleware
 
 ## License
 
