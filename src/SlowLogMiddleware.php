@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PhpPackagist\HyperfMiddleware;
 
+use Hyperf\Logger\LoggerFactory;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\ContainerInterface;
 use Psr\Container\NotFoundExceptionInterface;
@@ -11,6 +12,7 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\MiddlewareInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Psr\Log\LoggerInterface;
 
 /**
  * Slow log middleware.
@@ -109,9 +111,9 @@ class SlowLogMiddleware implements MiddlewareInterface
      * @throws ContainerExceptionInterface
      * @throws NotFoundExceptionInterface
      */
-    protected function getLogger()
+    protected function getLogger(): LoggerInterface
     {
-        return $this->container->get('logger');
+        return $this->container->get(LoggerFactory::class)->get('slow_log');
     }
 
     /**
