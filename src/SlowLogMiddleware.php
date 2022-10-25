@@ -29,7 +29,7 @@ class SlowLogMiddleware implements MiddlewareInterface
      *
      * @var float
      */
-    protected float $threshold = 0.5;
+    protected float $threshold = 5;
 
     /**
      * create a new request id middleware instance.
